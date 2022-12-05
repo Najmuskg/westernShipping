@@ -1,0 +1,186 @@
+@mixin animate-line-hover {
+    left: 0;
+    width: 100%;
+}
+@mixin animate-line {
+    background-color:$color--2;
+    bottom: -3px;
+    content: "";
+    height: 1px;
+    right: 0;
+    position: absolute;
+    width: 0;
+    transition: all 0.5s;
+}
+
+
+@mixin bg-cover {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+@mixin d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+// ===========================
+// media Query--Responsive
+// ============================
+
+@mixin large-screen {
+    @media (min-width: 1366px) {
+      @content;
+    }
+  }
+  
+  @mixin medium-screen {
+    @media (max-width: 1366px) {
+      @content;
+    }
+  }
+  
+  @mixin tab-screen {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin mobile-screen {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+/* Single property */
+html {
+  @include fluid-type(font-size, 320px, 1366px, 12px, 16px);
+}
+
+.holder{
+  @include fluid-type(padding-left padding-right, 320px, 1366px, 20px, 40px); 
+}
+
+
+
+/* Multiple properties with same values */
+// h1 {
+//   @include fluid-type(padding-bottom padding-top, 20em, 70em, 2em, 4em);
+// }
+
+
+
+// $p-font-sizes: (
+//   null  : 35px,
+//   480px : 35px,
+//   640px : 45px,
+//   1024px: 55px
+// );
+
+
+// @mixin font-size($fs-map) {
+//   @each $fs-breakpoint, $fs-font-size in $fs-map {
+//     @if $fs-breakpoint == null {
+//       font-size: $fs-font-size;
+//     }
+//     @else {
+//       @media screen and (min-width: $fs-breakpoint) {
+//         font-size: $fs-font-size;
+//       }
+//     }
+//   }
+// }
+
+
+// h1{
+//   @include font-size($p-font-sizes);
+// }
+
+
+
+
+
+
+// $breakpoints: (
+//   small : 480px,
+//   medium: 700px, // Previously 640px
+//   large : 1024px
+// );
+
+// $p-font-sizes: (
+//   null  : 15px,
+//   small : 16px,
+//   medium: 17px,
+//   large : 19px
+// );
+
+// $h1-font-sizes: (
+//   null  : 35px,
+//   small : 35px,
+//   medium: 45px,
+//   large : 55px
+// );
+
+
+// @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+//   @each $fs-breakpoint, $fs-font-size in $fs-map {
+//     @if $fs-breakpoint == null {
+//       font-size: $fs-font-size;
+//     }
+//     @else {
+//       // If $fs-font-size is a key that exists in
+//       // $fs-breakpoints, use the value
+//       @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+//         $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+//       }
+//       @media screen and (min-width: $fs-breakpoint) {
+//         font-size: $fs-font-size;
+//       }
+//     }
+//   }
+// }
+
+// h1{
+//   @include font-size($h1-font-sizes);
+// }

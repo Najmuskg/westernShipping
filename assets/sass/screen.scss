@@ -1,0 +1,23 @@
+// reset
+@import "reset";
+@import "fonts";
+
+// mixins
+@import "mixins";
+
+// variables
+@import "variables";
+
+
+@import "base";
+@import "utilities";
+@import "slider";
+
+@import "animation";
+@import "swiper";
+
+@import "header";
+@import "footer";
+
+@import "home";
+@import "loader";

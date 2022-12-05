@@ -1,0 +1,42 @@
+
+.text-center {
+    text-align: center;
+}
+.bg-gray {
+    background-color: #fafafa;
+}
+
+h1{
+    color: $color--3;
+    font-size: rem(50px);
+    font-family: 'Lato';
+    font-weight:900 ;
+}
+h2{
+    color: $color--3;
+    font-size: rem(35px);
+    font-family: 'Lato';
+    font-weight:900 ;
+}
+h3{
+    color: $color--3;
+    font-size: rem(38px);
+    font-family: 'Lato';
+    font-weight:900 ;
+}
+.btn{
+font-size: rem(15px);
+background-color: $color--white;
+color: $color--2;
+border: 1px solid $color--5;
+padding: rem(13px) rem(25px);
+min-width: rem(160px);
+text-transform: uppercase;
+
+&:hover{
+    background-color: $color--2; 
+    color: $color--white;
+    border: 1px solid $color--5;
+    transition: all 0.3s ease-out;
+}
+}
