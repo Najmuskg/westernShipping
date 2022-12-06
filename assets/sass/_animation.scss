@@ -6,6 +6,33 @@
 	transform: translateY(0%) scale(1);
   }
   
+  @keyframes infinity {
+    25% {
+        opacity: 1;
+
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+}
+
+@keyframes Pump {
+    to {
+        opacity: 1;
+    }
+}
+
+
+
   @keyframes image-loaded {
 	from {
 	  opacity: 0;
@@ -154,7 +181,7 @@
   
 	  .section--title {
 		&::after {
-		  width: 132px;
+		  width: rem(80px);
 		}
 	  }
   

@@ -9,7 +9,8 @@
         top: 0;
         width: 100%;
         z-index: 9999;
-        height: rem(150px);
+        height: rem(132.55px);
+        border-bottom: 2px solid #f46036;
         .holder {
             @include d-flex;
             flex-direction: column;
@@ -17,26 +18,25 @@
                 width: 100%;
                 border-bottom: rem(1px) solid $color--4;
                 text-align: right;
-                padding: rem(12px) 0;
-                @media (max-width: 1081px){
-                   text-align: center;
+                padding: rem(10px) 0;
+                .btn {
+                    padding: 10px 25px;
+                    position: relative;
+                    margin: 0;
                 }
-                .btn-log_in {
-                    a {
-                        font-size: rem(12px);
-                        font-family: "Myriad Pro Regular";
-                        letter-spacing: 0.2rem;
-                    }
+                @media (max-width: 1081px) {
+                    text-align: center;
                 }
             }
             .header-nav {
                 width: 100%;
                 @include d-flex;
-                padding: rem(17px) 0 rem(22px) 0;
+                // padding: rem(17px) 0 rem(22px) 0;
                 .header-logo {
+                    line-height: 0;
                     a {
                         img {
-                            max-width: rem(256px);
+                            max-width: rem(230px);
                             height: rem(40px);
                             @include mobile-screen {
                                 max-width: rem(200px);
@@ -47,7 +47,7 @@
                 .header-menu {
                     .main-menu {
                         @include d-flex;
-                        @media (max-width: 1081px){
+                        @media (max-width: 1081px) {
                             position: fixed;
                             flex-direction: column;
                             top: 0;
@@ -58,7 +58,7 @@
                             height: 70%;
                             justify-content: center;
                             // transition: all 0.3s ease-in-out;
-                            &.main-menu_show{
+                            &.main-menu_show {
                                 right: 0;
                                 transition: all 0.3s ease-in-out;
                                 &:nth-child(1) {
@@ -77,21 +77,20 @@
                                     animation-delay: 0.9s;
                                 }
                                 &:nth-child(6) {
-                                    animation-delay: 0.10s;
+                                    animation-delay: 0.1s;
                                 }
                             }
                         }
-                       
+
                         li {
-                            @media (max-width: 1081px){
+                            padding: rem(25px) 0;
+                            @media (max-width: 1081px) {
                                 animation-name: fadeInLeft;
                                 animation-duration: 0.15s;
                                 animation-timing-function: ease-in-out;
                                 animation-fill-mode: forwards;
                             }
-                           
-                          
-                            
+
                             a {
                                 color: $color--black;
                                 font-size: rem(14px);
@@ -122,7 +121,6 @@
                         }
                     }
                     .toggle-menu {
-    
                         background-color: rgba(0, 0, 0, 0);
                         border: 0;
                         cursor: pointer;
@@ -135,7 +133,7 @@
                         width: 30px;
                         z-index: 991;
                         transition: all 0.5s ease-in-out;
-                        @media (min-width: 1081px){
+                        @media (min-width: 1081px) {
                             display: none;
                         }
                         i {
@@ -150,7 +148,7 @@
                         i + i {
                             margin-top: 0.4375rem;
                         }
-                        &.toggle-active{
+                        &.toggle-active {
                             position: fixed;
                             top: 20px;
                             i {
@@ -248,11 +246,20 @@
                 @include bg-cover;
                 flex-shrink: 0;
                 width: 100%;
-                height: calc(100vh - 152px);
+                height: calc(100vh - 132.55px);
                 position: relative;
                 transition-property: transform;
                 transform: translateZ(0);
                 backface-visibility: hidden;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background: linear-gradient(180deg, rgba(36, 45, 63, 0) 0%, rgba(36, 45, 63, 0.5) 100%);
+                    width: 100%;
+                    height: rem(119px);
+                }
 
                 .holder {
                     display: flex;
@@ -265,7 +272,8 @@
                         color: $color--white;
                         max-width: rem(617px);
                         text-transform: uppercase;
-
+                        text-shadow: 3px 3px 15px $color--body-text;
+                        // filter: drop-shadow(0px 10px 5px #4444dd);
                         span {
                             display: block;
                             font-family: "Lato";
@@ -280,42 +288,79 @@
                     p {
                         color: $color--white;
                         max-width: rem(400px);
-                        font-family: "Myriad Pro Regular";
+                        font-family: "Noto Sans", sans-serif;
                         font-weight: normal;
                         transition-delay: 0.6s;
-                    }
-                }
-            }
-        }
-        .swiper-controls {
-            display: flex;
-            align-items: center;
-            .swiper-controls__navigation {
-                align-items: center;
-                display: flex;
-            }
-            .swiper-controls__progress {
-                align-items: center;
-                display: flex;
-                flex-grow: 1;
-                margin-left: 0.625rem;
-                .swiper-pagination-progressbar {
-                    background: $color--1;
-                    height: rem(2px);
-                    position: relative;
-                    width: 83%;
-                    margin: 0 auto;
-                    span {
-                        background: #1e6692;
-                        height: 100%;
-                        left: 0;
-                        position: absolute;
-                        top: 0;
-                        transform-origin: left top;
-                        width: 100%;
+                        text-shadow: 3px 3px 15px $color--body-text;
                     }
                 }
             }
         }
     }
 }
+
+.scroll-down {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    a {
+        display: inline-block;
+        padding-bottom: 40px;
+        text-decoration: none;
+        span {
+            color: #fff;
+            display: block;
+            font-family: "Noto Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            white-space: nowrap;
+            animation: pulse 2s linear alternate infinite;
+            transition: all 0.3s ease-in-out;
+        }
+        .arrow {
+            height: 2px;
+            left: 50%;
+            margin-left: -11px;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            width: 22px;
+            transform: scale3d(0.5, 0.5, 0.5);
+            animation: infinity 3s ease-out infinite;
+            &:nth-child(1) {
+                animation: infinity 3s ease-out 1s infinite;
+            }
+            &:nth-child(2) {
+                animation: infinity 3s ease-out 2s infinite;
+            }
+            &:after {
+                background: #fff;
+                content: " ";
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                transform: skew(0deg, -35deg);
+            }
+            &::before {
+                background: #fff;
+                content: " ";
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: skew(0deg, 35deg);
+                width: 50%;
+            }
+        }
+        &:hover span {
+            opacity: 0.7;
+        }
+    }
+}
+

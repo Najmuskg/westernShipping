@@ -1,0 +1,40 @@
+#work-wrapper {
+    padding: rem(83px) 0;
+    .holder {
+        .details {
+            .working-text {
+                order: 2;
+                position: relative;
+                left: -222px;
+            }
+            .working {
+                clip-path: polygon(5% 0, 45% 0, 98% 105%, 60% 112%);
+                top: 0;
+                left: -335px;
+            }
+        }
+    }
+}
+
+.fleet-wrap {
+    .holder {
+        .work-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+        .image-block {
+            clip-path: none;
+            transition-delay: 0.4s;
+            left: 0;
+            top: 0;
+            img {
+                max-width: rem(790px);
+                height: 100%;
+            }
+        }
+        
+    }
+}
