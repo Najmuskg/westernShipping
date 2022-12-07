@@ -171,7 +171,7 @@ scrollers.forEach((scroller) => observer.observe(scroller));
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
+  },
     // breakpoints: {
     //   768: {
     //     slidesPerView: 2,
@@ -179,7 +179,7 @@ scrollers.forEach((scroller) => observer.observe(scroller));
     //   },
     // },
   });
-
+ 
 
   $(".nav-toggle").on("click", function () {
     $(this).toggleClass("footer-menu-expand");
