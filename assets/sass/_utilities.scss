@@ -110,13 +110,12 @@ h3 {
 
 .numberList {
     display: grid;
-    gap: 10px;
+    gap: 80px 0;
     margin: 0 auto;
     max-width: 1020px;
     position: absolute;
-    top: 175px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 130px;
+    left: 162px;
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -125,40 +124,46 @@ h3 {
     .numberList__item {
         padding: 0 0.9375rem;
         text-align: center;
-        border-right: 1px solid #b3d3ee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 75px;
+      img{
+        max-height: 65px;
+      }
         @media (max-width: 768px) {
             border-bottom: 1px solid #b3d3ee;
             border-right: none;
             padding: 0 0 30px 0;
         }
         &:nth-child(1) {
-            transition-delay: 0.2s;
-        }
-        &:nth-child(2) {
-            transition-delay: 0.3s;
-        }
-        &:nth-child(3) {
             transition-delay: 0.4s;
         }
-        &:nth-child(4) {
-            transition-delay: 0.5s;
-        }
-        &:nth-child(5) {
+        &:nth-child(2) {
             transition-delay: 0.6s;
         }
-        &:last-child {
-            border-right: none;
+        &:nth-child(3) {
+            transition-delay: 0.8s;
         }
+       
+        
         .numberList__item_number {
-            color: #2a465c;
-            font-weight: 500;
-            font-size: 3.75rem;
+            color: #011936;
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 32px;
+            margin-bottom: 8px;
+            text-align: left;
+            max-width: 185px;
         }
 
         p {
-            font-family: #222;
-            font-size: 1.1875rem;
-            line-height: 130%;
+            color: #f46036;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: .08em;
+            line-height: normal;
         }
     }
+
 }
