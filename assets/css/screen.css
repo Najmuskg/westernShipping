@@ -461,6 +461,8 @@ h3 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     gap: 20px;
+    top: 28px;
+    left: 0;
   }
 }
 
@@ -485,8 +487,6 @@ h3 {
 
 @media (max-width: 768px) {
   .numberList .numberList__item {
-    border-bottom: 1px solid #b3d3ee;
-    border-right: none;
     padding: 0 0 30px 0;
   }
 }
@@ -523,7 +523,7 @@ h3 {
   color: #f46036;
   font-size: 20px;
   font-weight: 400;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   line-height: normal;
 }
 
@@ -1579,6 +1579,12 @@ h3 {
   left: 80px;
 }
 
+@media (max-width: 768px) {
+  .header-wrapper .swiper .swiper-button-prev {
+    display: none;
+  }
+}
+
 .header-wrapper .swiper .swiper-button-prev::before {
   background-image: url(https://westernshipping.sg/wp-content/themes/construct/assets/images/prev-arrow.png);
   width: 100%;
@@ -1612,6 +1618,12 @@ h3 {
   top: 50%;
   bottom: 50%;
   right: 80px;
+}
+
+@media (max-width: 768px) {
+  .header-wrapper .swiper .swiper-button-next {
+    display: none;
+  }
 }
 
 .header-wrapper .swiper .swiper-button-next::before {
@@ -2081,11 +2093,29 @@ footer .footer--info .footer--info__footnote ul li a:hover {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .working-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .working-title .work-info {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   max-width: 50%;
+}
+
+@media (max-width: 768px) {
+  .working-title .work-info {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .working-title .work-info h2 {
@@ -2135,9 +2165,22 @@ footer .footer--info .footer--info__footnote ul li a:hover {
           transition-delay: 0.4s;
 }
 
+@media (max-width: 768px) {
+  .working-title .image-block {
+    top: -89px;
+    left: -10px;
+  }
+}
+
 .working-title .image-block img {
   max-width: 49.375rem;
   height: 29.625rem;
+}
+
+@media (max-width: 768px) {
+  .working-title .image-block img {
+    height: 19.625rem;
+  }
 }
 
 #work-wrapper {
@@ -2152,11 +2195,26 @@ footer .footer--info .footer--info__footnote ul li a:hover {
   left: -222px;
 }
 
+@media (max-width: 768px) {
+  #work-wrapper .holder .details .working-text {
+    left: 0;
+  }
+}
+
 #work-wrapper .holder .details .working {
   -webkit-clip-path: polygon(5% 0, 45% 0, 98% 105%, 60% 112%);
           clip-path: polygon(5% 0, 45% 0, 98% 105%, 60% 112%);
   top: 0;
   left: -335px;
+}
+
+@media (max-width: 768px) {
+  #work-wrapper .holder .details .working {
+    left: 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .fleet-wrap .holder .work-info {
@@ -2176,6 +2234,19 @@ footer .footer--info .footer--info__footnote ul li a:hover {
   max-width: 40%;
 }
 
+@media (max-width: 768px) {
+  .fleet-wrap .holder .work-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 .fleet-wrap .holder .image-block {
   -webkit-clip-path: none;
           clip-path: none;
@@ -2184,11 +2255,18 @@ footer .footer--info .footer--info__footnote ul li a:hover {
           transition-delay: 0.4s;
   left: 0;
   top: 0;
+  padding: 0 0 110px 0;
 }
 
 .fleet-wrap .holder .image-block img {
   max-width: 49.375rem;
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  .fleet-wrap .holder .image-block img {
+    max-width: 28.375rem;
+  }
 }
 
 .opportunities-wrap .holder .working-title {
@@ -2221,6 +2299,8 @@ footer .footer--info .footer--info__footnote ul li a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0px 0 30px 0;
+    gap: 10px;
   }
 }
 

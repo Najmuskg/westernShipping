@@ -213,6 +213,9 @@
             top: 50%;
             bottom: 50%;
             left: 80px;
+            @media (max-width: 768px) {
+                display: none;
+            }
             &::before {
                 background-image: url(https://westernshipping.sg/wp-content/themes/construct/assets/images/prev-arrow.png);
                 width: 100%;
@@ -244,6 +247,9 @@
             top: 50%;
             bottom: 50%;
             right: 80px;
+            @media (max-width: 768px) {
+                display: none;
+            }
             &::before {
                 background-image: url(https://westernshipping.sg/wp-content/themes/construct/assets/images/next-arrow.png);
                 width: 100%;
