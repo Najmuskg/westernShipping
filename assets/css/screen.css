@@ -339,16 +339,22 @@ button:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 0.625rem;
-  font-weight: 500;
+  font-size: 12px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
   letter-spacing: 0.09em;
   line-height: 0.75rem;
-  text-transform: uppercase;
+  padding: 30px 0 0 0;
 }
 
 .breadcrumbs li a {
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
   text-decoration: none;
+  font-weight: 400;
+}
+
+.breadcrumbs li a:hover {
+  color: #f46036;
 }
 
 .breadcrumbs li:last-child {
@@ -1558,7 +1564,7 @@ h3 {
   height: 340px;
 }
 
-.header-wrapper .banner-wrapper .holder {
+.header-wrapper .banner-wrapper .holder .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1576,7 +1582,7 @@ h3 {
   height: 340px;
 }
 
-.header-wrapper .banner-wrapper .holder h1 {
+.header-wrapper .banner-wrapper .holder .title h1 {
   color: #ffffff;
   text-shadow: 3px 3px 15px #808285;
 }
@@ -2481,6 +2487,10 @@ footer .footer--info .footer--info__footnote ul li a:hover {
   max-width: 435px;
 }
 
+.content-wrapper .holder .safety-info:last-child {
+  border-bottom: none;
+}
+
 .company-wrapper {
   padding: 0 0 80px 0;
 }
@@ -2585,5 +2595,13 @@ footer .footer--info .footer--info__footnote ul li a:hover {
 .team-wrapper .holder .working-title .image-block img {
   max-width: 100%;
   height: auto;
+}
+
+.sub_banner {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
 }
 /*# sourceMappingURL=screen.css.map */

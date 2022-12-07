@@ -194,6 +194,8 @@
         @include bg-cover;
         height: 340px;
         .holder {
+          
+           .title{
             @include d-flex;
             justify-content: center;
             height: 340px;
@@ -201,6 +203,7 @@
                 color: $color--white;
                 text-shadow: 3px 3px 15px $color--body-text;
             }
+           }
         }
     }
 
