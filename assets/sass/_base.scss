@@ -1,12 +1,11 @@
 body {
-  // background-color: $color--white;
   color: $color--body-text;
   font-family: "Lato", sans-serif;
   font-weight: 400;
 }
 
 .holder {
-  max-width: rem(1025px);
+  max-width: rem(1020px);
   margin: 0 auto;
   position: relative;
 }
@@ -21,10 +20,9 @@ p,
 ul,
 ol {
   color: $color--body-text;
-  font-family: "Noto", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: rem(15px);
-  letter-spacing: 0.02em;
-  line-height: 142%;
+  line-height: 24px;
   margin: 0;
   list-style: none;
 }
@@ -143,10 +141,13 @@ button:focus {
   line-height: 0.75rem;
   padding: 30px 0 0 0;
   li {
+    text-shadow: 2px 2px 4px #808285;
     a {
       color:$color--white;
       text-decoration: none;
       font-weight: 400;
+      
+      
       &:hover{
         color: $color--1;
       }

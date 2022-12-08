@@ -9,7 +9,7 @@
         top: 0;
         width: 100%;
         z-index: 9999;
-        height: rem(132.55px);
+        height: rem(131.385px);
         border-bottom: 2px solid #f46036;
         .holder {
             @include d-flex;
@@ -20,9 +20,12 @@
                 text-align: right;
                 padding: rem(10px) 0;
                 .btn {
-                    padding: 10px 25px;
+                    padding: 12px 25px;
                     position: relative;
                     margin: 0;
+                    font-size: .8em;
+                    letter-spacing: 0.2em;
+                    white-space: nowrap;
                 }
                 @media (max-width: 1081px) {
                     text-align: center;
@@ -36,7 +39,7 @@
                     line-height: 0;
                     a {
                         img {
-                            max-width: rem(230px);
+                            max-width: rem(225px);
                             height: rem(40px);
                             @include mobile-screen {
                                 max-width: rem(200px);
@@ -83,7 +86,7 @@
                         }
 
                         li {
-                            padding: rem(25px) 0;
+                            padding: rem(22px) 0;
                             @media (max-width: 1081px) {
                                 animation-name: fadeInLeft;
                                 animation-duration: 0.15s;
@@ -94,7 +97,7 @@
                             a {
                                 color: $color--black;
                                 font-size: rem(14px);
-                                font-family: "Noto Sans";
+                                font-family: "Noto Sans", sans-serif;
                                 font-weight: normal;
                                 position: relative;
                                 @include mobile-screen {
@@ -193,6 +196,18 @@
     .banner-wrapper {
         @include bg-cover;
         height: 340px;
+        position: relative;
+        z-index: 1;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(180deg, rgba(36, 45, 63, 0) 0%, rgba(36, 45, 63, 0.5) 100%);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
         .holder {
           
            .title{
@@ -201,7 +216,7 @@
             height: 340px;
             h1{
                 color: $color--white;
-                text-shadow: 3px 3px 15px $color--body-text;
+                text-shadow: 2px 2px 4px #808285;
             }
            }
         }
@@ -216,7 +231,6 @@
         padding: 0;
         z-index: 1;
         .swiper-button-prev {
-            background: #ddd;
             width: 55px;
             height: 55px;
             line-height: 53px;
@@ -229,6 +243,7 @@
             top: 50%;
             bottom: 50%;
             left: 80px;
+            cursor: pointer;
             @media (max-width: 768px) {
                 display: none;
             }
@@ -249,7 +264,6 @@
             }
         }
         .swiper-button-next {
-            background: #ddd;
             text-shadow: 3px 3px 15px $color--body-text;
             width: 55px;
             height: 55px;
@@ -263,6 +277,7 @@
             top: 50%;
             bottom: 50%;
             right: 80px;
+            cursor: pointer;
             @media (max-width: 768px) {
                 display: none;
             }
@@ -291,11 +306,12 @@
                 @include bg-cover;
                 flex-shrink: 0;
                 width: 100%;
-                height: calc(100vh - 132.55px);
+                height: calc(100vh - 131.385px);
                 position: relative;
                 transition-property: transform;
                 transform: translateZ(0);
                 backface-visibility: hidden;
+                z-index: 1;
                 &::after {
                     content: "";
                     position: absolute;
@@ -303,7 +319,8 @@
                     right: 0;
                     background: linear-gradient(180deg, rgba(36, 45, 63, 0) 0%, rgba(36, 45, 63, 0.5) 100%);
                     width: 100%;
-                    height: rem(119px);
+                    height: 100%;
+                    z-index: -1;
                 }
 
                 .holder {
@@ -317,7 +334,7 @@
                         color: $color--white;
                         max-width: rem(617px);
                         text-transform: uppercase;
-                        text-shadow: 3px 3px 15px $color--body-text;
+                        text-shadow: 2px 2px 4px #808285;
                         // filter: drop-shadow(0px 10px 5px #4444dd);
                         span {
                             display: block;
@@ -333,10 +350,12 @@
                     p {
                         color: $color--white;
                         max-width: rem(400px);
+                        font-size: rem(15px);
                         font-family: "Noto Sans", sans-serif;
                         font-weight: normal;
+                        font-weight: normal;
                         transition-delay: 0.6s;
-                        text-shadow: 3px 3px 15px $color--body-text;
+                        text-shadow: 2px 2px 4px #808285;
                     }
                 }
             }
