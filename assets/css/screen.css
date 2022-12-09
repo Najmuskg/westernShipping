@@ -2236,6 +2236,12 @@ footer .footer--info .footer--info__footnote ul li a:hover {
   max-width: 49.375rem;
 }
 
+@media (max-width: 768px) {
+  .working-title .image-block img {
+    max-width: 100%;
+  }
+}
+
 #work-wrapper {
   padding: 5.1875rem 0;
 }
