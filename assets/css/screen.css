@@ -194,6 +194,7 @@ body {
   color: #808285;
   font-family: "Lato", sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 .holder {
@@ -1605,7 +1606,6 @@ h3 {
 
 .header-wrapper .banner-wrapper .holder .title h1 {
   color: #ffffff;
-  text-shadow: 2px 2px 4px #808285;
 }
 
 .header-wrapper .swiper {
@@ -2639,10 +2639,25 @@ footer .footer--info .footer--info__footnote ul li a:hover {
   gap: 0 50px;
 }
 
+@media (max-width: 768px) {
+  .credentials-wrapper .holder .downloads-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .credentials-wrapper .holder .downloads-wrap .downloads-item {
   border-right: 2px solid #dedede;
   padding: 0 40px 0 0;
   margin: 60px 0px 0 0;
+}
+
+@media (max-width: 768px) {
+  .credentials-wrapper .holder .downloads-wrap .downloads-item {
+    border-right: none;
+  }
 }
 
 .credentials-wrapper .holder .downloads-wrap .downloads-item:nth-child(1) {
@@ -2855,6 +2870,12 @@ footer .footer--info .footer--info__footnote ul li a:hover {
   border-bottom: none;
 }
 
+@media (max-width: 768px) {
+  .work-wrapper .holder .working-title .work-info {
+    padding-top: 20px;
+  }
+}
+
 .work-wrapper .holder .working-title .work-info h2 {
   max-width: 300px;
   margin: 0 0 30px 0;
@@ -2873,6 +2894,12 @@ footer .footer--info .footer--info__footnote ul li a:hover {
 .work-wrapper .holder .working-title .image-block img {
   max-width: 100%;
   height: 316px;
+}
+
+@media (max-width: 768px) {
+  .work-wrapper .holder .working-title .image-block img {
+    padding-top: 20px;
+  }
 }
 
 .work-wrapper .holder .before {
@@ -2908,5 +2935,230 @@ footer .footer--info .footer--info__footnote ul li a:hover {
 .sub_do-wrapper .holder .work-info_btn .btn {
   margin-top: 65px;
   padding: 18px 60px;
+}
+
+.content-block {
+  padding: 70px 0 65px 0;
+}
+
+.content-block .holder .contact-info {
+  padding-bottom: 70px;
+}
+
+.content-block .holder .contact-info p {
+  text-align: center;
+  max-width: 774px;
+  margin: 0 auto;
+}
+
+.content-block .holder .places-wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0 10px;
+  border-bottom: 0.0625rem solid #d7d7d7;
+}
+
+.content-block .holder .places-wrap .places-item {
+  text-align: center;
+}
+
+.content-block .holder .places-wrap .places-item img {
+  -webkit-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.content-block .holder .places-wrap .places-item:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content-block .holder .places-wrap .places-item:last-child img {
+  -webkit-transition-delay: 0.6s;
+       -o-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.content-block .holder .places-wrap .places-item .places-info {
+  padding: 60px 0 65px  0;
+}
+
+.content-block .holder .places-wrap .places-item .places-info h2 {
+  margin-bottom: 22px;
+}
+
+.content-block .holder .places-wrap .places-item .places-info h2::after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.content-block .holder .places-wrap .places-item .places-info .phone {
+  margin: 25px 0 20px 0;
+}
+
+.content-block .holder .places-wrap .places-item .places-info .link_email {
+  color: #808285;
+}
+
+.contact_form-wrap {
+  padding-bottom: 65px;
+}
+
+.contact_form-wrap .holder .form-title {
+  text-align: center;
+}
+
+.contact_form-wrap .holder .form-title h2::after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.contact_form-wrap .holder form input[type="text"],
+.contact_form-wrap .holder form input[type="name"],
+.contact_form-wrap .holder form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  margin: 0 0 1.25rem 0;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+  color: rgba(34, 34, 34, 0.3);
+  border: 0.0625rem solid rgba(34, 34, 34, 0.3);
+  outline: none;
+  resize: none;
+}
+
+.contact_form-wrap .holder form textarea::-webkit-input-placeholder {
+  color: #96989a;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contact_form-wrap .holder form textarea:-ms-input-placeholder {
+  color: #96989a;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contact_form-wrap .holder form textarea::-ms-input-placeholder {
+  color: #96989a;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contact_form-wrap .holder form textarea::placeholder {
+  color: #96989a;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contact_form-wrap .holder form input::-webkit-input-placeholder {
+  color: #96989a;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contact_form-wrap .holder form input:-ms-input-placeholder {
+  color: #96989a;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contact_form-wrap .holder form input::-ms-input-placeholder {
+  color: #96989a;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contact_form-wrap .holder form input::placeholder {
+  color: #96989a;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contact_form-wrap .holder form input[type="text"] {
+  width: 49.7%;
+}
+
+.contact_form-wrap .holder form input[type="name"] {
+  width: 100%;
+}
+
+.contact_form-wrap .holder form textarea {
+  width: 100%;
+  height: 190px;
+}
+
+.contact_form-wrap .holder form .submit {
+  text-align: center;
+  padding: 0.625rem 0;
+}
+
+.contact_form-wrap .holder form .submit button {
+  background-color: transparent;
+  border: 1px solid #002949;
+  border-radius: 0;
+  color: #011936;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.8em;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact_form-wrap .holder form .submit button::before {
+  content: "";
+  background-color: #011936;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.contact_form-wrap .holder form .submit button:hover {
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.contact_form-wrap .holder form .submit button:hover::before {
+  width: 100%;
+}
+
+.contact_form-wrap .holder form .submit .btn {
+  margin-top: 0;
 }
 /*# sourceMappingURL=screen.css.map */
