@@ -132,20 +132,7 @@ scrollers.forEach((scroller) => observer.observe(scroller));
 
 
 
-  /* Filter drop down */
-  /* ------------------------------------------- */
-  $(".filter-title").click(function () {
-    $(this).data("clicked", true);
-    var $this = $(this);
-
-    $(".filter-title").not($this).next().removeClass("filter-active");
-    $(this).next().toggleClass("filter-active");
-  });
-
-  $(".cloak").click(function () {
-    $(this).parent().removeClass("filter-active");
-  });
-  // End of Filter drop down
+ 
 
   
 
@@ -188,7 +175,7 @@ scrollers.forEach((scroller) => observer.observe(scroller));
 
 
  $(function() {
-    $('.scroll-down').click (function() {
+    $('.scroll-down, down').click (function() {
       $('html, body').animate({scrollTop: $('.scroll--down').offset().top }, 'slow');
       return false;
     });
