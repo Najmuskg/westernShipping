@@ -180,3 +180,25 @@ scrollers.forEach((scroller) => observer.observe(scroller));
       return false;
     });
   });
+
+  $(function(){
+    $(".main li").hover(
+      function(){
+        $("ul.sub:not(:animated)",this).slideDown(500);
+      },
+      function(){
+        $("ul.sub",this).slideUp(300);
+      }
+    )
+   
+  })
+
+  // $(".main li").mouseover(function(){
+  //   $("ul.sub",this).slideDown(500);
+  // });
+  // $(".main li").mouseout(function(){
+  //   $("ul.sub",this).slideUp();
+  // });
+
+
+ 
