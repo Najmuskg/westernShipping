@@ -131,17 +131,22 @@
                     </h2>
                 </div>
                 <form>
-                    <input  type="text" name="Number" placeholder="Phone" required>
-
-                    <input type="text" name="Company" placeholder="Company" required>
-
-                    <input type="name" name="Subject" placeholder="Subject" required>
-
-
-                    <textarea name="text" placeholder="Messege:" cols="30" rows="6"></textarea>
-                    <div class="submit">
+                   <div class="form-flex" >
+                    <div class="form-control slide-up" data-scroll="">
+                        <input type="text"  name="Phone" placeholder="Phone" required>
+                    </div>
+                    <div class="form-control slide-up" data-scroll="">
+                        <input type="text"  name="Company" placeholder="Company" required>
+                    </div>
+                   </div>
+                    <div class="form-control slide-up" data-scroll="">
+                        <input class="full-width" type="text"  name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-control slide-up" data-scroll="">
+                        <textarea name="textares" cols="30" rows="10" placeholder="Message:"></textarea>
+                    </div>
+                    <div class="submit slide-up" data-scroll="">
                         <button type="submit" value="Submit" class="btn">Submit</button>
-
                     </div>
                 </form>
             </div>

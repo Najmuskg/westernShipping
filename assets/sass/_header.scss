@@ -60,18 +60,19 @@
                             width: 60%;
                             height: 70%;
                             justify-content: center;
-                            // transition: all 0.3s ease-in-out;
+                             transition: all 0.3s ease-in-out;
                             &.main-menu_show {
                                 right: 0;
                                 transition: all 0.3s ease-in-out;
+                               li{
                                 &:nth-child(1) {
-                                    animation-delay: 0.5s;
+                                    animation-delay: 0.2s;
                                 }
                                 &:nth-child(2) {
-                                    animation-delay: 0.6s;
+                                    animation-delay: 0.4s;
                                 }
                                 &:nth-child(3) {
-                                    animation-delay: 0.7s;
+                                    animation-delay: 0.6s;
                                 }
                                 &:nth-child(4) {
                                     animation-delay: 0.8s;
@@ -80,18 +81,19 @@
                                     animation-delay: 0.9s;
                                 }
                                 &:nth-child(6) {
-                                    animation-delay: 0.1s;
+                                    animation-delay: 1s;
                                 }
+                               }
                             }
                         }
 
                         li {
                             padding: rem(22px) 0;
                             @media (max-width: 1081px) {
-                                animation-name: fadeInLeft;
-                                animation-duration: 0.15s;
-                                animation-timing-function: ease-in-out;
-                                animation-fill-mode: forwards;
+                                // animation-name: fadeInLeft;
+                                // animation-duration: 0.15s;
+                                // animation-timing-function: ease-in-out;
+                                // animation-fill-mode: forwards;
                             }
 
                             a {
@@ -153,12 +155,13 @@
                         }
                         &.toggle-active {
                             position: fixed;
-                            top: 20px;
+                            top: 55px;
+                            right: 26px;
                             i {
                                 background-color: $color--black;
                                 position: relative;
                                 &:nth-child(1) {
-                                    top: 9px;
+                                    top: 7px;
                                     -webkit-transform: rotate(45deg);
                                     -ms-transform: rotate(45deg);
                                     transform: rotate(45deg);

@@ -8,8 +8,11 @@ $(".menu-item-has-children > a").on("click", function (event) {
 /* Sticky Menu */
   /* ------------------------------------------- */
   $(".toggle-menu").on("click", function () {
-    $(".main--menu").toggleClass("active");
+    $(".main-menu").toggleClass("main-menu_show");
     $(".toggle-menu").toggleClass("toggle-active");
+  });
+  $(".toggle-active").on("click", function () {
+    $(".toggle-menu").removeClass("toggle-active");
   });
 
 
@@ -193,7 +196,7 @@ scrollers.forEach((scroller) => observer.observe(scroller));
    
   })
 
-  // $(".main li").mouseover(function(){
+  // $(".main li").click(function(){
   //   $("ul.sub",this).slideDown(500);
   // });
   // $(".main li").mouseout(function(){
